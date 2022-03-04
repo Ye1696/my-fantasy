@@ -13,6 +13,7 @@ import { red } from "@mui/material/colors";
 import { ExpandMore, Favorite, MoreVert, Share } from "@material-ui/icons";
 import { useContentful } from "../../../client";
 import { Box } from "@mui/material";
+import { MultipleMedia } from "./MultipleMedia";
 
 const ExpandMoreAction = styled((props) => {
   const { expand, ...other } = props;
@@ -31,23 +32,27 @@ export function News() {
   const [showDescription, setShowDescription] = useState(null);
 
   const handleExpandClick = (id) => {
-    if(id ===showDescription){
-        setShowDescription(null)
+    if (id === showDescription) {
+      setShowDescription(null);
     } else {
-        setShowDescription(id)
+      setShowDescription(id);
     }
   };
+  console.log({ news });
   useEffect(() => {
     getNews().then((res) => setNews(res));
   }, []);
   return (
-    <Box sx ={{overflow:"hidden"}}>
+    <Box sx={{ overflow: "hidden" }}>
       {news.map((item, index) => {
-          const show = showDescription === index;
+        const show = showDescription === index;
         return (
           <Card sx={{ maxWidth: 865, marginBottom: "10px" }}>
+            <CardHeader
+              title={item.shotDescription}
+              subheader="September 14, 2016"
+            />
             <CardMedia
-              component="img"
               height="100%"
               sx={{
                 "&.MuiCardMedia-imgobjectFit": {
@@ -55,21 +60,15 @@ export function News() {
                   width: "80%",
                 },
               }}
-              image={item.newsImmage.file.url}
-              alt="Paella dish"
+              children={<MultipleMedia medias={item.newsMedia}/>}
             />
-            <CardContent>
-              <Typography variant="body2" color="text.secondary">
-                {item.shotDescription}
-              </Typography>
-            </CardContent>
             <CardActions disableSpacing>
               <IconButton aria-label="share">
                 <Share />
               </IconButton>
               <ExpandMoreAction
                 expand={show}
-                onClick={()=>handleExpandClick(index)}
+                onClick={() => handleExpandClick(index)}
                 aria-expanded={show}
                 aria-label="show more"
               >

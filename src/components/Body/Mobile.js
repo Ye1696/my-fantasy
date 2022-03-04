@@ -26,7 +26,7 @@ export function MobileBody() {
         onChange={handleChange}
         indicatorColor="secondary"
         variant="fullWidth"
-        sx={{ position: "sticky", top: "65px", background: "white" }}
+        sx={{ position: "sticky", top: "65px", background: "white",zIndex:2 }}
       >
         <Tab value="1" icon={<Announcement />} />
         <Tab value="2" label={<ListAlt />} />

@@ -11,16 +11,16 @@ import {
 import orderBy  from "lodash/orderBy";
 
 const data = [
-  { name: "Yerbol", lastGame: 15, totall: 85 },
-  { name: "Yerbol", lastGame: 12, totall: 68 },
-  { name: "Yerbol", lastGame: 13, totall: 57 },
-  { name: "Yerbol", lastGame: 18, totall: 95 },
-  { name: "Yerbol", lastGame: 17, totall: 73 },
-  { name: "Yerbol", lastGame: 19, totall: 82 },
-  { name: "Yerbol", lastGame: 8, totall: 69 },
-  { name: "Yerbol", lastGame: 5, totall: 75 },
-  { name: "Yerbol", lastGame: 7, totall: 93 },
-  { name: "Yerbol", lastGame: 11, totall: 80 },
+  { name: "Yerbol", lastGame: 15 },
+  { name: "Yerbol", lastGame: 12 },
+  { name: "Yerbol", lastGame: 13 },
+  { name: "Yerbol", lastGame: 18 },
+  { name: "Yerbol", lastGame: 17 },
+  { name: "Yerbol", lastGame: 19 },
+  { name: "Yerbol", lastGame: 8 },
+  { name: "Yerbol", lastGame: 5 },
+  { name: "Yerbol", lastGame: 7 },
+  { name: "Yerbol", lastGame: 11 },
 ];
 
 export function Results() {
@@ -31,11 +31,10 @@ export function Results() {
       sx={{ maxWidth: 500, position: "sticky", top: "75px" }}
     >
       <Table size="small" aria-label="a dense table">
-        <TableHead>
+        <TableHead sx={{backgroundColor:" #99ff99"}}>
           <TableRow>
-            <TableCell>Имя</TableCell>
-            <TableCell align="center">Последняя игра</TableCell>
-            <TableCell align="center">Общ. сумма</TableCell>
+            <TableCell>Team name</TableCell>
+            <TableCell align="center">MVP</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -56,7 +55,6 @@ export function Results() {
                 {row.name}
               </TableCell>
               <TableCell align="center">{row.lastGame}</TableCell>
-              <TableCell align="center">{row.totall}</TableCell>
             </TableRow>
           ))}
         </TableBody>
