@@ -14,7 +14,6 @@ import "./multipleMedia.css";
 import { Lazy, Pagination } from "swiper";
 
 export function MultipleMedia({ medias }) {
-  console.log({ medias });
 
   return (
     <>

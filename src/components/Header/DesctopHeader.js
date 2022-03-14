@@ -23,10 +23,6 @@ export function DesctopHeader() {
             <Telegram />
             <Typography>erbol_mkm@mail.ru</Typography>
           </Grid>
-          <Grid sx={{ display: "flex", alignItems: "center",gap: "5px" }}>
-            <Email />
-            <Typography>erbol_mkm@mail.ru</Typography>
-          </Grid>
         </Grid>
       </Grid>
     </AppBar>

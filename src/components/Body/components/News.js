@@ -38,7 +38,6 @@ export function News() {
       setShowDescription(id);
     }
   };
-  console.log({ news });
   useEffect(() => {
     getNews().then((res) => setNews(res));
   }, []);

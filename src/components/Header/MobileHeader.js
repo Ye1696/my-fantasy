@@ -1,4 +1,4 @@
-import { Email, Telegram } from "@material-ui/icons";
+import { Email, SportsSoccer, Telegram } from "@material-ui/icons";
 import { AppBar, Grid, IconButton } from "@mui/material";
 import logo from "../../assets/premier-league.png";
 
@@ -16,11 +16,11 @@ export function MobileHeader() {
           }}
         >
           <IconButton>
-            <Telegram />
+            <SportsSoccer/>
           </IconButton>
-
+          
           <IconButton>
-            <Email />
+            <Telegram />
           </IconButton>
         </Grid>
       </Grid>

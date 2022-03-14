@@ -30,7 +30,7 @@ export function Results() {
       component={Paper}
       sx={{ maxWidth: 500, position: "sticky", top: "75px" }}
     >
-      <Table size="small" aria-label="a dense table">
+      <Table size="small">
         <TableHead sx={{backgroundColor:" #99ff99"}}>
           <TableRow>
             <TableCell>Team name</TableCell>
