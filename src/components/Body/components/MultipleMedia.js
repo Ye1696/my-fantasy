@@ -1,20 +1,16 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/lazy";
+import "./multipleMedia.css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-import "./multipleMedia.css";
-
-// import required modules
+import React  from "react";
 import { Lazy, Pagination } from "swiper";
+import { useMediaQuery } from "@mui/material";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 
 export function MultipleMedia({ medias }) {
-
+  const isSm = useMediaQuery("(max-width:732px)");
   return (
     <>
       <Swiper
@@ -43,7 +39,7 @@ export function MultipleMedia({ medias }) {
               <SwiperSlide>
                 <img
                   src={media.fields.file.url}
-                  width="100%" height="500px"
+                  height = {isSm? "500px" : "1000px"}
                   className="swiper-lazy"
                 />
                 <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
