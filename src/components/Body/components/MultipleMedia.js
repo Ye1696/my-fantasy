@@ -43,7 +43,7 @@ export function MultipleMedia({ medias }) {
               <SwiperSlide>
                 <img
                   src={media.fields.file.url}
-                  width="100%" height="700px"
+                  width="100%" height="500px"
                   className="swiper-lazy"
                 />
                 <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
