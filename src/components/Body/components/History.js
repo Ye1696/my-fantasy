@@ -63,12 +63,12 @@ export function History() {
               onClick={() => handleOpenHistory(index)}
               sx={{
                 alignItems: "center",
-                justifyContent: "center",
-                gap: "15px",
-                width: "100%",
-                background: "#aa80ff",
+                display:"flex",
+                justifyContent: "space-between",
+                background: "#315C2B",
                 marginBottom: "3px",
-                padding: "14px 0",
+                padding: "14px 30px",
+                color:"white"
               }}
             >
               <Box>{item.year}</Box>
@@ -76,14 +76,14 @@ export function History() {
             </Box>
             <Collapse in={open}>
               <Table size="small">
-                <TableHead sx={{ backgroundColor: "#99ff99" }}>
+                <TableHead sx={{ backgroundColor: "#60712F"}}>
                   <TableRow>
                     <TableCell>Name</TableCell>
                     <TableCell align="center">Game</TableCell>
                     <TableCell align="center">Total</TableCell>
                   </TableRow>
                 </TableHead>
-                <TableBody>
+                <TableBody  sx={{background:"#A1AA52"}}>
                   {item.list.map((row) => (
                     <TableRow key={row.name}>
                       <TableCell component="th" scope="row">
@@ -95,7 +95,7 @@ export function History() {
                   ))}
                 </TableBody>
               </Table>
-              <Box display="flex" sx={{width:"100%", background:"#99ff99", padding:"8px 0", alignItems:"center", gap:"50px"}}>
+              <Box display="flex" sx={{width:"100%", background:"#60712F",color:"white", padding:"8px 0", alignItems:"center", gap:"50px"}}>
                   <Box sx={{paddingLeft:"10px"}}>Name: {item.mvp.name}</Box>
                   <Box>Total MVP: {item.mvp.total}</Box>
               </Box>

@@ -4,7 +4,7 @@ import logo from "../../assets/premier-league.png";
 
 export function MobileHeader() {
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: "#aa80ff", top: 0 }}>
+    <AppBar position="sticky" sx={{ backgroundColor: "#315C2B", top: 0 }}>
       <Grid container justifyContent="space-between">
         <img src={logo} style={{ width: "70px", marginLeft: "5%" }} />
         <Grid
